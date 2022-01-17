@@ -15,3 +15,4 @@ The journal.md file in this repo is an example of what it outputs.
 * Folder or file selector?
 * Config file instead of hardcoded pathnames and file names
 * Fix the time to be 12hr time and to not remove the 0 from the numbers
+* Accept any suggestions that make the code "better" and more "correct"
