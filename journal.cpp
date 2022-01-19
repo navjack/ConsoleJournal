@@ -1,15 +1,3 @@
-// this program will allow the user to save a daily journal entry from the terminal in markdown formatting and save it
-// save the journal file "N:/journal/journal.md" to a variable called journalFile
-// open and read each line of journalFile to an array called journalArray
-// get the current date and save it to a variable called currentDate
-// get the current time and save it to a variable called currentTime
-// ask the user "What did you accomplish today?" and save it to a variable called userInput
-// append "* # currentDate - currentTime" to the userInput and save it to a variable called newJournalEntry
-// add newJournalEntry to the start of journalArray and save it to a variable called newJournal
-// write newJournal to "N:/journal/journal.md"
-// print "Journal entry saved"
-// print newJournal
-
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -25,7 +13,7 @@ public:
     string journalFile = "N:/journal/journal.md";
     string currentDate;
     string currentTime;
-    string userInput;
+    string userJournalEntry;
     string newJournalEntry;
     string newJournal;
     string journalArray[1290];
@@ -35,19 +23,53 @@ public:
     time_t t = time(0);
     ofstream newJournalFile;
     struct tm* now = localtime(&t);
+    string workingDirectory;
 private:
 
 };
 
-int main() 
+void askuserworkingdirectory();
+void theJournal();
+
+int main()
+{
+    SetupVars vars;
+    askuserworkingdirectory();
+    theJournal();
+    return 0;
+}
+
+void askuserworkingdirectory()
+{
+    class SetupVars  ( SetupVars );
+    cout << "What folder would you like to save the journal file to?" << endl;
+    //string workingDirectory;
+    getline(cin, SetupVars.workingDirectory);
+    string journalFile = SetupVars.workingDirectory + "/journal.md";
+    //ifstream journal;
+    SetupVars.journal.open(journalFile);
+    if (SetupVars.journal.is_open()) 
+    {
+        cout << "journal.md file already exists in this folder" << endl;
+    }
+    else 
+    {
+        //ofstream newJournalFile;
+        SetupVars.newJournalFile.open(journalFile);
+        SetupVars.newJournalFile << "";
+        SetupVars.newJournalFile.close();
+    }
+}
+
+void theJournal()
 {
     class SetupVars  ( SetupVars );
     SetupVars.journal.open(SetupVars.journalFile);
     SetupVars.currentDate = to_string(SetupVars.now -> tm_year + 1900) + "/" + to_string(SetupVars.now -> tm_mon + 1) + "/" + to_string(SetupVars.now -> tm_mday);
     SetupVars.currentTime = to_string(SetupVars.now -> tm_hour) + ":" + to_string(SetupVars.now -> tm_min) + ":" + to_string(SetupVars.now -> tm_sec);
     cout << "What did you accomplish today?" << endl;
-    getline(cin, SetupVars.userInput);
-    SetupVars.newJournalEntry = "* # " + SetupVars.currentDate + " - " + SetupVars.currentTime + " - " + SetupVars.userInput;
+    getline(cin, SetupVars.userJournalEntry);
+    SetupVars.newJournalEntry = "* # " + SetupVars.currentDate + " - " + SetupVars.currentTime + " - " + SetupVars.userJournalEntry;
     SetupVars.journalArray[SetupVars.i] = SetupVars.newJournalEntry;
     SetupVars.i++;
     while (getline(SetupVars.journal, SetupVars.journalArray[SetupVars.i])) 
@@ -66,5 +88,4 @@ int main()
     cout << "Journal entry saved" << endl;
     cout << SetupVars.newJournal;
     cin.get();
-    return 0;
 }
