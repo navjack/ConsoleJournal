@@ -14,10 +14,6 @@ To describe it another way
 
 The journal.md file in this repo is an example of what it outputs.
 
-## To-Do
+## Did
 
-* Add a folder / file selector if no file is found
-* Config file instead of hardcoded pathnames and file names
-* Fix the time to be 12hr time and to not remove the 0 from the numbers
-* Accept any suggestions that make the code "better" and more "correct"
-* Make it so that you can pass your entry to the program in one line instead of having to run it. Also this will allow you to set it as an alias or path variable or whatever
+* It's python now instead of C++
