@@ -14,7 +14,7 @@ date_date = datetime.datetime.now().strftime("%Y/%m/%d")
 time_time = datetime.datetime.now().strftime("%I:%M:%S %p")
 
 # append the new entry to the start of the list of existing entries
-existing_entries.insert(0, "* # " + date_date + " - " + time_time + " - " + new_entry + "\n")
+existing_entries.insert(0, "* " + date_date + " - " + time_time + " - " + new_entry + "\n")
 
 # write the updated list of entries to the file "journal.md"
 with open("journal.md", "w") as file:
