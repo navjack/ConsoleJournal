@@ -1,6 +1,6 @@
 import datetime, sys, getopt
 
-# read each line of the file "/journal.md" into a list of strings as a variable called "existing_entries"
+# read each line of the file "journal.md" into a list of strings as a variable called "existing_entries"
 with open("journal.md", "r") as file:
     existing_entries = file.readlines()
 
