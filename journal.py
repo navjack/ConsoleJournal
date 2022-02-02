@@ -5,36 +5,36 @@ import sys
 import code
 
 # color codes
-red                 = "\033[31m"
-dark_red            = "\033[31;1m"
-green               = "\033[32m"
-dark_green          = "\033[32;1m"
-yellow              = "\033[33m"
-dark_yellow         = "\033[33;1m"
-blue                = "\033[34m"
-dark_blue           = "\033[34;1m"
-magenta             = "\033[35m"
-dark_magenta        = "\033[35;1m"
-cyan                = "\033[36m"
-dark_cyan           = "\033[36;1m"
-white               = "\033[37m"
-dark_white          = "\033[37;1m"
-black               = "\033[30m"
+red = "\033[31m"
+dark_red = "\033[31;1m"
+green = "\033[32m"
+dark_green = "\033[32;1m"
+yellow = "\033[33m"
+dark_yellow = "\033[33;1m"
+blue = "\033[34m"
+dark_blue = "\033[34;1m"
+magenta = "\033[35m"
+dark_magenta = "\033[35;1m"
+cyan = "\033[36m"
+dark_cyan = "\033[36;1m"
+white = "\033[37m"
+dark_white = "\033[37;1m"
+black = "\033[30m"
 
 # end color code
-color               = "\033[0m"
+color = "\033[0m"
 
 # this is the variable you can change that points to your journal file
-journal_file        = "/Volumes/ext/journal-gitea/NavJack/To Do/Untracked To Do.md"
+journal_file = "/Volumes/ext/journal-gitea/NavJack/To Do/Untracked To Do.md"
 
 # ask the user the entry and save it into a variable called "new_entry"
-new_entry           = input("What did you accomplish just now?\n")
+new_entry = input("What did you accomplish just now?\n")
 
 # color the variable "new_entry" and save that to another variable called "color_new_entry"
-color_new_entry     = green + new_entry + color
+color_new_entry = green + new_entry + color
 
 # get the date and time in 12 hour format and save it into a variable called "date_and_time"
-date_and_time       = datetime.datetime.now().strftime("%Y/%m/%d - %I:%M:%S %p")
+date_and_time = datetime.datetime.now().strftime("%Y/%m/%d - %I:%M:%S %p")
 
 # color the "date_and_time" variable and save it into another variable called "color_date_and_time"
 color_date_and_time = red + date_and_time + color
