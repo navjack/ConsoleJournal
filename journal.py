@@ -11,17 +11,17 @@ new_entry = input("What did you accomplish just now?\n")
 date_and_time = datetime.datetime.now().strftime("%Y/%m/%d - %I:%M:%S %p")
 
 with open(journal_file, "r") as open_journal:
-    existing_entries = open_journal.readlines()
+    entries = open_journal.readlines()
 
-existing_entries.insert(0, "* " + date_and_time + " - " + new_entry + "\n")
+entries.insert(0, "* " + date_and_time + " - " + new_entry + "\n")
 
 with open(journal_file, "w") as open_journal:
-    open_journal.writelines(existing_entries)
+    open_journal.writelines(entries)
 
 os.system("cls" if os.name == "nt" else "clear")
 
 with open(journal_file, "r") as open_journal:
     entries = open_journal.readlines()
     entries.reverse()
-    for entry in entries:
-        print(entry.rstrip())
+    for lines in entries:
+        print(lines.rstrip())
