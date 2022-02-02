@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # datetime used for getting the date and time
 import datetime
 
