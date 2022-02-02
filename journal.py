@@ -1,8 +1,14 @@
+# datetime used for getting the date and time
 import datetime
+
+# os used for clearing the console
 import os
+
+# readline used to enhance the input function
 import readline
-import sys
-import code
+
+# import sys
+# import code
 
 # color codes
 red = "\033[31m"
