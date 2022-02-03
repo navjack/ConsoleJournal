@@ -14,8 +14,6 @@ To describe it another way
 
 The journal.md file in this repo is an example of what it outputs.
 
-If you want to add this as an alias you can do similar to what I'm doing. ``alias journal="(cd /Volumes/ext/journal; python3 "/Volumes/ext/journal/journal.py")"``. to explain this it just makes it so when you type ``journal`` in the terminal it will go to the directory that the python script lives in and then it will run the python script, but it does all of this in a subshell which allows it to return to the previous place as if you never changed directory at all. Otherwise, the script would use your current directory as the working directory and it will make a ``journal.md`` file where ever you are.
-
 ## Did
 
 * It's python now instead of C++
