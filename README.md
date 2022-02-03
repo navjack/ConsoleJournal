@@ -19,3 +19,6 @@ If you want to add this as an alias you can do similar to what I'm doing. ``alia
 ## Did
 
 * It's python now instead of C++
+* Ability to use the arrow keys to move where you are typing to correct things
+* Pretty colors!
+* COMMENTS
