@@ -36,12 +36,12 @@ color = "\033[0m"
 journal_file = "/Volumes/ext/journal-gitea/NavJack/To Do/Untracked To Do.md"
 
 # ask the user the entry and save it into a variable called "new_entry"
-new_entry = input("What did you accomplish just now?\n")
+new_entry = input(yellow + "What did you accomplish just now?\n" + color)
 
 # if the user presses the enter key without typing anything, the program will exit
 if new_entry == "":
-    print("You didn't type anything.\n")
-    print("Exiting...")
+    print(red + "You didn't type anything.\n" + color)
+    print(green + "Exiting..." + color)
     exit()
 
 # color the variable "new_entry" and save that to another variable called "color_new_entry"
