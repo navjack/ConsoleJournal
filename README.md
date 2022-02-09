@@ -17,6 +17,6 @@ The journal.md file in this repo is an example of what it outputs.
 ## Did
 
 * It's python now instead of C++
-* Ability to use the arrow keys to move where you are typing to correct things
+* Ability to use the arrow keys to move where you are typing to correct things **REMOVED UNTIL I CAN FIGURE OUT A BUG**
 * Pretty colors!
 * COMMENTS
