@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
 
-# Datetime used for getting the date and time
+# Sys for exiting
 import sys
+
+# Datetime used for getting the date and time
 import datetime
 
 # Readline used to enhance the input function
+# the issue with using this is that the interactive user input loses the
+# ability to word wrap. Any text entered that wraps over the width of the
+# terminal will start to overlap on the other side of the screen.
+# now i understand that this is mainly a problem with the terminal, but
+# i'm not sure how to fix it or if fixing it is worthwhile. I might just use
+# sys to accept inputs in a non-interactive manner instead.
 # import readline
 
 # color codes
