@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 
 # Datetime used for getting the date and time
+import sys
 import datetime
 
 # Readline used to enhance the input function
-import readline
-
-import sys
+# import readline
 
 # color codes
 RED = "\033[31m"
@@ -50,7 +49,7 @@ with open(JOURNAL_FILE, mode='r', encoding='utf8') as OPEN_JOURNAL:
     ENTRIES_DISPLAY.reverse()
 
 # Ask the user the entry and save it into a variable called "new_entry"
-NEW_ENTRY = input(f"{YELLOW}{WHATDID}{COLOR}")
+NEW_ENTRY = input(YELLOW + WHATDID + COLOR)
 
 # If the user presses the enter key without typing anything, the program
 # will exit
