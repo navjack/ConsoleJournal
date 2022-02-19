@@ -1,15 +1,4 @@
 # PowerShell ConsoleJournal
-# Variable Setup.
-$ISTHIS = "Is this a completed task or is it an idea?"
-$WHATDID = "What did you accomplish just now"
-$YOUDIDNT = "You didn't type anything."
-$EXITING = "Exiting..."
-# Ask the user what kind of entry they want to make.
-Write-Host "$ISTHIS" -ForegroundColor Yellow
-$ENTRY_TYPE = Read-Host "?"
-if ($ENTRY_TYPE -eq "t" -or $ENTRY_TYPE -eq "T") {ToDo}
-elseif ($ENTRY_TYPE -eq "i" -or $ENTRY_TYPE -eq "I") {Idea}
-else {Write-Host "$YOUDIDNT$EXITING"; Exit}
 # Ask the user for input and store the input in a variable called $TODO_NEW_ENTRY.
 function ToDo {
     # Variable Setup.
@@ -110,3 +99,14 @@ function Idea {
     Set-Content -Path $IDEA_FILE -Value $IDEA_ENTRIES_DISPLAY
     exit
 }
+# Variable Setup.
+$ISTHIS = "Is this a completed task or is it an idea?"
+$WHATDID = "What did you accomplish just now"
+$YOUDIDNT = "You didn't type anything."
+$EXITING = "Exiting..."
+# Ask the user what kind of entry they want to make.
+Write-Host "$ISTHIS" -ForegroundColor Yellow
+$ENTRY_TYPE = Read-Host "?"
+if ($ENTRY_TYPE -eq "t" -or $ENTRY_TYPE -eq "T") {ToDo}
+elseif ($ENTRY_TYPE -eq "i" -or $ENTRY_TYPE -eq "I") {Idea}
+else {Write-Host "$YOUDIDNT$EXITING"; Exit}
