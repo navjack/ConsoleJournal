@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# pylint: disable=fixme
+# pylint: disable=missing-module-docstring
+
+# NavJack's Console "Journal"
+# TODO: Bring to feature parity with the PowerShell Journal
+# Code last updated February 09 2022 5:47 PM EST
 
 # Sys for exiting
 import sys
