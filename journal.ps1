@@ -1,5 +1,5 @@
 # NavJack's PowerShell ConsoleJournal
-# Code last updated February 19 2022 5:58 PM EST
+# Code last updated February 25 2022 12:40 PM EST
 # Ask the user for input and store the input in a variable called $TODO_NEW_ENTRY.
 function ToDo {
     # Variable Setup.
@@ -58,7 +58,7 @@ function Idea {
     $SPCHYPHEN = " - "
     $YOUDIDNT = "You didn't type anything."
     $EXITING = "Exiting..."
-    # Change this variable to the location of your journal file.
+    # Change this variable to the location of your Ideas file.
     $IDEA_FILE = "/Volumes/ext/journal-gitea/NavJack/To Do/Ideas.md"
     # Open the file pointed to by the variable $IDEA_FILE into another variable
     # called $OPEN_IDEA and then count the number of lines in the file
@@ -96,7 +96,7 @@ function Idea {
     $IDEALENGTH = $IDEA_ENTRIES_DISPLAY.count
     $LINE = 1
     $IDEA_ENTRIES_DISPLAY = 1..$IDEALENGTH | ForEach-Object {$IDEA_ENTRIES_DISPLAY[-$LINE]; $LINE++}
-    # Save the updated journal to the file pointed to by the variable $IDEA_FILE.
+    # Save the updated Ideas to the file pointed to by the variable $IDEA_FILE.
     Set-Content -Path $IDEA_FILE -Value $IDEA_ENTRIES_DISPLAY
     exit
 }
@@ -108,6 +108,6 @@ $EXITING = "Exiting..."
 # Ask the user what kind of entry they want to make.
 Write-Host "$ISTHIS" -ForegroundColor Yellow
 $ENTRY_TYPE = Read-Host "?"
-if ($ENTRY_TYPE -eq "t" -or $ENTRY_TYPE -eq "T") {ToDo}
-elseif ($ENTRY_TYPE -eq "i" -or $ENTRY_TYPE -eq "I") {Idea}
+if ($ENTRY_TYPE -eq "t" -or $ENTRY_TYPE -eq "T" -or $ENTRY_TYPE -eq "task" -or $ENTRY_TYPE -eq "Task") {ToDo}
+elseif ($ENTRY_TYPE -eq "i" -or $ENTRY_TYPE -eq "I" -or $ENTRY_TYPE -eq "idea" -or $ENTRY_TYPE -eq "Idea") {Idea}
 else {Write-Host "$YOUDIDNT$EXITING"; Exit}
