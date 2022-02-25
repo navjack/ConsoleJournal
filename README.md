@@ -17,6 +17,7 @@ The journal.md file in this repo is an example of what it outputs.
 ## Did
 
 * There are Python and PowerShell versions!
+* **The Python version is not feature parity**
 * **PowerShell** - Ability to use the arrow keys to move where you are typing to correct things 
 * Pretty colors!
 * COMMENTS
