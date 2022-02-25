@@ -1,4 +1,5 @@
-# PowerShell ConsoleJournal
+# NavJack's PowerShell ConsoleJournal
+# Code last updated February 19 2022 5:58 PM EST
 # Ask the user for input and store the input in a variable called $TODO_NEW_ENTRY.
 function ToDo {
     # Variable Setup.
