@@ -14,6 +14,8 @@ To describe it another way
 
 The journal.md file in this repo is an example of what it outputs.
 
+You need to make changes to the script in order to use this correctly. We use a variable in the code itself to point to the files. Possibly in the future I will change this.
+
 ## Did
 
 * There are Python and PowerShell versions!
